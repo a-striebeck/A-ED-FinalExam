@@ -1,12 +1,10 @@
 #include <square.hpp>
 
 square::square(/* args */)
-{
-}
+{}
 
 square::~square()
-{
-}
+{}
 
 float square::perimeter(){
     float perimeter = x * x;

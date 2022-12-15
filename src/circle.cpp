@@ -2,12 +2,10 @@
 #include <cmath>
 
 circle::circle(/* args */)
-{
-}
+{}
 
 circle::~circle()
-{
-}
+{}
 
 float circle::perimeter(){
     float perimeter = 2 * pi * x;

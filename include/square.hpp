@@ -1,13 +1,11 @@
-#include <figure.hpp>
-#ifndef SQUARE
-#define SQUARE
 
+#ifndef SQUARE_HPP
+#define SQUARE_HPP
+#include <figure.hpp>
 class square : public figure
 {
-private:
-    float x;
 public:
-    square(/* args */);
+    square();
     ~square();
     float perimeter();
     float area();

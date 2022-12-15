@@ -1,21 +1,33 @@
 #include <iostream>
+#include <figure.hpp>
 #include <square.hpp>
 #include <circle.hpp>
 
 using namespace std;
 
 int main(int argc, char const *argv[])
-{
-    figure* figura[3];
-    figura[0] = new circle();
-    figura[1] = new square();
-    figura[2] = new square();
+{figure* figs[3];
 
-        
-    
-    delete figura[0];
-    delete figura[1];
-    delete figura[2];
+    figs[0] = new circle();
+    figs[1] = new square();
+    figs[2] = new square();
+
+    figs[0]->setXvalue( 10 );
+    figs[1]->setXvalue( 2 );
+    figs[2]->setXvalue( 7 ); 
+
+    int idx = 0;
+    for ( int i = 0; i < 3 ; i++ ) {
+        cout << "Figure number [" << idx++ << "]" 
+             << "\n\tperimeter: " << figs[i]->perimeter()  // \n = salto de linea y \t es tabulación
+             << "\n\tarea:..... " << figs[i]->area()     
+             << std::endl;
+    }
+
+    delete figs[0];
+    delete figs[1];
+    delete figs[2];
+
     getchar();
     return 0;
 }
